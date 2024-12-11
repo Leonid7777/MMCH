@@ -3,7 +3,7 @@ from numpy.polynomial.polynomial import Polynomial
 
 
 def func(x):
-    return np.sin(100 * x)
+    return np.abs(x)
 
 def create_points(start_point, end_point, count_of_points, uniform_grid=True):
 
