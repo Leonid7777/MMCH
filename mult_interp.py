@@ -47,7 +47,7 @@ def multip_newton_interp(start_point, end_point, count_of_points, function, tole
     for i in range(1, n):
         div = []
         for j in range(0, count_of_points - i):
-            if points[j] == points[j + i]:
+            if np.abs(points[j] - points[j + i]) < 10**(-10):
                 div.append(function(points[j], i) / np.math.factorial(i))
             else:
                 div.append((l[i - 1][j] - l[i - 1][j + 1]) / (points[j] - points[j + i]))
