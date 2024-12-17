@@ -13,7 +13,6 @@ def test(x, function, tolerance):
     else:
         print("Can't achieve that tolerance")
 
-
 def newton(start_point, function, function_deriv, tolerance):
     x = start_point
 
@@ -28,15 +27,12 @@ def gd(start_point, function, function_deriv, tolerance, alpha):
     first = func(x)
     second = 10 * first
 
-
     while abs(first - second) >= tolerance:
         second = first
         x = x - alpha * function_deriv(x)
         first = function(x)
         
     print(function(x))
-
-
 
 
 start_point = 10
